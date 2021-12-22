@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main(){
+  int k;
+  double sum,n;
+
+  while(k%3==0){
+    printf("数字を入力してください :");
+    scanf("%lf",&n);
+    sum+=n;
+    printf("%f",sum);
+    k=sum;
+    k=k/10;
+    k=k%10;
+  }
+  printf("条件成立！\n");
+  retunn 0;
+}
+  

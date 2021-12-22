@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main ( ){
+  int ten[7];
+  int i;
+
+  printf("7人分の評点を入力して下さい。\n");
+  for(i=0;i<7;i++)
+    scanf("%d\n",&ten[i]);
+
+  for(i=0;i<7;i++){
+    printf("%d: %4d  ",i+1,ten[i]);
+    
+    if (ten[i]>=80)
+    printf("A\n");
+    else if(ten[i]<80 && ten[i]>=65)
+      printf("B\n");
+    else if (ten[i]<65 && ten[i]>=50)
+      printf("C\n");
+    else if(ten[i]<50 && ten[i]>=35)
+      printf("D\n");
+    else 
+      printf("F\n");
+  }
+
+  return 0;
+}
+
+  
+
+  

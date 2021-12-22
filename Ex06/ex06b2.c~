@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main ( )
+{
+  int n,r,kai,bunsi,aaa ;
+
+  printf("nとrを入力してください："n,r);
+  scanf("%d%d",&n,&r);
+
+  for(i=n;i>0;i--){
+    
+      kai = kai * i ;
+    }
+  for(j=r;r>0;j--){
+
+    bunsi = bunsi * r ;
+  }
+  for(k=n-r;n-r>0;k--){
+
+    aaa = aaa * r ;
+  }
+
+  printf("%d\n",kai / bunsi * aaa);
+
+  return 0;
+}

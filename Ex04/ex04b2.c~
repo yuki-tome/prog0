@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main ( ){
+  double ondo;
+  int situdo;
+  printf("温度と湿度を入力して下さい ");
+  scanf("%lf%d",&ondo,&situdo);
+  if(ondo < 20 ) printf("寒い");
+  else if(20 =< ondo && ondo < 28 && situdo < 60) printf("快適");
+  else if(20 =< ondo && situdo >= 60) printf("蒸し暑い");
+  else if(28 =< ondo && situdo < 60) printf("暑い");
+  return 0;
+}

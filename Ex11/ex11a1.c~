@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+double sessi[100](double);
+
+int main( )
+{
+  double i sessi[100];
+
+  printf("摂氏(°C)    華氏（°F)")
+
+  for(i=0;i<=100;i=i+5){
+    printf("%d	  %d"&i,&sessi[i]);
+  }
+  return 0;
+}
+
+double sessi[100](double c)
+{
+  double f;
+  f = 9*c/5 + 32;
+  return f ;
+}

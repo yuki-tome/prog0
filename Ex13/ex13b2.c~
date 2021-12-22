@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define STSIZE 5
+
+void enqueue(double);
+int dequeue(void);
+
+int stack[STSIZE];
+int top = 0;
+
+int main(){
+  int data, status, i;
+  double suuji;
+
+  while (1) {
+    printf("挿入:1, 取り出し:2, 表示:3, 終了:0>> ");
+    status = scanf("%d", &data);
+    if (status != 1) break;
+    if (data == 2){
+      printf(" データ: %d\n", dequeue() );
+    }
+    else if (data == 1){
+      scanf("%lf",&suuji);
+      enqueue(suuji);
+    }
+    else if(data==3){
+      scanf("%d",&suuji);
+      for(i=0;i<top;i++){
+	if(stack[i]==suuji){
+	  printf(" %d はスタック[%d]に存在します\n",suuji,i);
+	  break;
+	}
+      }
+      if(i==top) printf(" %d はスタックにありません\n",suuji);
+    }
+    else if(data==0)break;
+  }
+  return 0;
+}
+
+void enqueue(double num){
+  int i;
+  if (top == STSIZE) {
+    /* スタックがいっぱいの場合、エラー処理を行う */
+    printf("Queue overflow!\n");
+    exit (2);
+  }
+  stack[top] = num;
+  printf("[Stack] ");
+  for(i=0;i<=top;i++){
+    printf("%d ",stack[i]);
+  }
+  printf("\n");
+  top++;
+}
+int pop(void){
+  if (top == 0) {
+    /* スタックが空の場合、エラー処理を行う */
+    printf("Queue is empty!\n");
+    exit (3);
+  }
+  top--;
+  return stack[top];
+}

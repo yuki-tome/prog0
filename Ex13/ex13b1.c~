@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define STSIZE 100
+
+void push(int);
+double pop(void);
+
+int stack[STSIZE];
+int top = 0;
+
+int main(){
+  int data, status, i;
+  double suuji;
+
+  while (1) {
+    printf("挿入:1, 取り出し:2, 検索:3 >> ");
+    status = scanf("%d", &data);
+    if (status != 1) break;
+    if (data == 2) printf("データ: %d\n", pop() );
+    else if (data == 1){
+      scanf("%lf",&suuji);
+      push(suuji);
+    }
+    else if(data==3){
+      
+  }
+  printf("\n");
+  return 0;
+}
+
+void push(int num){
+  if (top == STSIZE) {
+    /* スタックがいっぱいの場合、エラー処理を行う */
+    printf("Stack overflow!\n");
+    exit (2);
+  }
+  stack[top] = num;
+  printf("[Stack] %d",num);
+  top++;
+}
+[Stack] 
+double pop(void){
+  if (top == 0) {
+    /* スタックが空の場合、エラー処理を行う */
+    printf("Stack is empty!\n");
+    exit (3);
+  }
+  top--;
+  return stack[top];
+}

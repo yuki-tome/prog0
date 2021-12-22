@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+int d2btransfunc(int);
+void a(int);
+int main (){
+  int data;
+  int i,f;
+
+  printf("２進数に変換したい１０進数の数値を入力してください\n");
+  scanf("%d",&data);
+  f=d2btransfunc(data);
+  a(f);
+
+  return 0;
+}
+
+int d2btransfunc(int j)
+{
+  int bin[8]={0,0,0,0,0,0,0,0},i,keta=1,total;
+  for(i=0;i<8;i++){
+    bin[i]=j%2;
+    j/=2;
+  }
+  for(i=0;i<8;i++){
+    bin[i]*=keta;
+    total+=bin[i];
+    keta*=10;
+  }
+  return total;
+}
+void a(int f)
+{
+  printf("%d\n",f);
+}

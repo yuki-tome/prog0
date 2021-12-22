@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main ( )
+{
+  int i,j,val[3][4];
+
+  for (i=0; i<4 ; i++){
+    for (j=0; j<3 ; j++){
+      val[j][i]=i+(j*10);
+    }
+  }
+  for (i=0; i<4 ; i++){
+    for (j=0; j<3 ; j++){
+      printf(" %2d ",val[j][i]);
+    }
+    printf("\n");
+  }
+  return 0;
+}

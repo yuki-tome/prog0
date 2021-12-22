@@ -1,0 +1,8 @@
+                 関数　　　　　　　　　　計算
+No.0,  n:3       main()       　　   m=0,n=3
+No.3,  n:3       function1()         m=3,n=3
+No.4,  n:9       function1()         m=4,n=3*3よりn=9
+No.1,  n:3       main()              m=1,n=3
+No.5,  n:0       function2()         m=5,n=0
+No.6,  n:9       function2()         m=6,n=9 また、関数ないでは、m=n、またn=m*mなのでn=9
+No.2,  n:3       main()              m=2,n=3

@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+  int a;
+  
+  printf("整数値を入力して下さい:");
+  
+  scanf("%d\n",result);
+  
+  printf("入力された値は%dで、5で割った余りは___です。\n",a/5,a%5);
+
+  return 0;
+}
